@@ -9,6 +9,9 @@ export class Tab1Page {
 
   constructor() {}
 
+  Inputa!: string;
+  Inputb!: string;
+  Inputc!: string;
   a!: number;
   b!: number;
   c!: number;

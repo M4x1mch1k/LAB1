@@ -22,17 +22,17 @@
       <p>Задано три числа. Якщо хоч одне з них парне, то знайти куб суми. В іншому випадку – суму кубів.</p>
       <ion-item>
         <ion-label position="floating">Перше число</ion-label>
-        <ion-input type="number" id="a" value="1" #Inputa></ion-input>
+        <ion-input type="number" id="a" value="1" [(ngModel)]="Inputa"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Друге число</ion-label>
-        <ion-input type="number" id="b" value="2" #Inputb></ion-input>
+        <ion-input type="number" id="b" value="2" [(ngModel)]="Inputb"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Третє число</ion-label>
-        <ion-input type="number" id="c" value="3" #Inputc></ion-input>
+        <ion-input type="number" id="c" value="3" [(ngModel)]="Inputc"></ion-input>
       </ion-item>
-      <ion-button expand="block" (click)="ras(Inputa.value, Inputb.value, Inputc.value)">Розрахунок</ion-button>
+      <ion-button expand="block" (click)="ras(Inputa, Inputb, Inputc)">Розрахунок</ion-button>
     </ion-card-content>
     <ion-item>
       <p>Результат обчислення {{d}}</p>
