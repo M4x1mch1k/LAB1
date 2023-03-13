@@ -16,7 +16,7 @@ export class GraphsPage implements OnInit {
     xx: string[] = [];
     yy: number[] = [];
     data1: string[] = [];
-  constructor() { }
+  constructor() { Chart.register(...registerables); }
 
   ngOnInit() {
   }
@@ -46,7 +46,7 @@ export class GraphsPage implements OnInit {
 graphras(xn: any, xk: any, a: any, h: any){
     this.data1 = [];
     this.xn = parseFloat(xn);
-    this.xk = parseFloat(xk);
+    this.xk = parseFloat(xk!);
     this.a = parseFloat(a);
     this.h = parseFloat(h);
     

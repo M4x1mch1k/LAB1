@@ -32,26 +32,25 @@
           </ion-text>
           <ion-item>
               <ion-label position="floating">Xn</ion-label>
-              <ion-input type="number" id="xn" value="2.9" [(ngModel)]="Inputxn"></ion-input>
+              <ion-input type="number" id="xn" value="2.9" #Inputxn></ion-input>
           </ion-item>
           <ion-item>
               <ion-label position="floating">Xk</ion-label>
-              <ion-input type="number" id="xk" value="17.48" [(ngModel)]="Inputxk"></ion-input>
+              <ion-input type="number" id="xk" value="17.48" #Inputxk></ion-input>
           </ion-item>
           <ion-item>
               <ion-label position="floating">a</ion-label>
-              <ion-input type="number" id="a" value="0.3" [(ngModel)]="Inputa"></ion-input>
+              <ion-input type="number" id="a" value="0.3" #Inputa></ion-input>
           </ion-item>
           <ion-item>
               <ion-label position="floating">h</ion-label>
-              <ion-input type="number" id="h" value="2.9" [(ngModel)]="Inputh"></ion-input>
+              <ion-input type="number" id="h" value="2.9" #Inputh></ion-input>
           </ion-item>
-          <ion-button expand="block" (click)="graphras(Inputxn, Inputxk, Inputa, Inputh)">
-              Розрахунок
-          </ion-button>
+          <ion-button expand="block" (click)="graphras(Inputxn.value, Inputxk.value, Inputa.value, Inputh.value)">Розрахунок</ion-button>
           <ion-item>
               <canvas #lineCanvas></canvas>
           </ion-item>
+          <ion-item *ngFor="let item of data1">{{item}}</ion-item>
       </ion-card-content>
   </ion-card>
 </ion-content>
