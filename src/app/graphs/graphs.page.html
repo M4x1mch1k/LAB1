@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Лабораторна робота №2
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Виконав студент КН32, Козлов М.О.
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark" menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Лабораторні роботи
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-header>
+          <ion-card-header>
+              Лабораторна робота №2
+          </ion-card-header>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-text>
+              Лабораторна робота №2
+          </ion-text>
+          <ion-item>
+              <ion-label position="floating">Xn</ion-label>
+              <ion-input type="number" id="xn" value="2.9" [(ngModel)]="Inputxn"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Xk</ion-label>
+              <ion-input type="number" id="xk" value="17.48" [(ngModel)]="Inputxk"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">a</ion-label>
+              <ion-input type="number" id="a" value="0.3" [(ngModel)]="Inputa"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">h</ion-label>
+              <ion-input type="number" id="h" value="2.9" [(ngModel)]="Inputh"></ion-input>
+          </ion-item>
+          <ion-button expand="block" (click)="graphras(Inputxn, Inputxk, Inputa, Inputh)">
+              Розрахунок
+          </ion-button>
+          <ion-item>
+              <canvas #lineCanvas></canvas>
+          </ion-item>
+      </ion-card-content>
+  </ion-card>
+</ion-content>
