@@ -54,11 +54,10 @@ export class FilePage implements OnInit {
   }
 
   getColor(Inputf:any, facility:any){
-    //this.facility = facility;
     if(Inputf == facility){
       return 'blue';
     }else{
-      return 'green';
+      return 'yellow';
     }
   }
 
