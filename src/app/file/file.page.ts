@@ -19,7 +19,8 @@ export class FilePage implements OnInit {
 
   }
 
-  async load(){
+  async load(facility:any){
+    this.data_subjects = [];
     this.loading = await this.loadingController.create({
       spinner: "bubbles",
       message: 'Loading...'
@@ -27,12 +28,15 @@ export class FilePage implements OnInit {
 
     await this.loading.present();
 
+    this.facility = facility;
+    console.log(this.facility);
+
     fetch(this.dataUrl).then(res => res.json())
       .then(json => {
         this.data = json;
         this.data = this.data.record;
         let i = 0;
-        console.log(this.data[1]);
+        let j = 0;
         while(this.data[i] != undefined){
           this.data_subjects.push(this.data[i][0]);
           i++;
@@ -41,13 +45,22 @@ export class FilePage implements OnInit {
       });
   }
 
-    toggleDetails(i:number){
-      if(this.showDetails[i]){
-        this.showDetails[i]=false;
-      }else{
-        this.showDetails[i]=true;
-      }
+  toggleDetails(i:number){
+    if(this.showDetails[i]){        
+      this.showDetails[i]=false;
+    }else{
+      this.showDetails[i]=true;
     }
+  }
+
+  getColor(Inputf:any, facility:any){
+    //this.facility = facility;
+    if(Inputf == facility){
+      return 'blue';
+    }else{
+      return 'green';
+    }
+  }
 
   ngOnInit() {
   }
