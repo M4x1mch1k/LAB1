@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InterfacepagePageRoutingModule } from './interfacepage-routing.module';
+import { ObservablepagePageRoutingModule } from './observablepage-routing.module';
 
-import { InterfacepagePage } from './interfacepage.page';
+import { ObservablepagePage } from './observablepage.page';
 import { MyHeaderModule } from '../my-header/my-header.component.module';
 
 @NgModule({
@@ -14,11 +14,9 @@ import { MyHeaderModule } from '../my-header/my-header.component.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    InterfacepagePageRoutingModule,
+    ObservablepagePageRoutingModule,
     MyHeaderModule
   ],
-  declarations: [
-    InterfacepagePage, 
-  ]
+  declarations: [ObservablepagePage]
 })
-export class InterfacepagePageModule {}
+export class ObservablepagePageModule {}
