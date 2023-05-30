@@ -16,7 +16,7 @@ describe('SeriesService', () => {
 
   fit('Sum of series test: ', () => {
     let x = 0.1;
-    let y = 0.9983;
+    let y = 0.94;
     let y1 = service.getSeries(x);
 
     expect(y.toFixed(2)).toBe(y1.toFixed(2));

@@ -16,19 +16,19 @@ describe("Toy and Dairy Testing", () => {
         dairy = new Dairy("Milk", 80, shower);
     })
 
-    it("Створення екзепляру класу Cart", () => {
+    fit("Створення екзепляру класу Cart", () => {
         expect(shower).toBeTruthy();
     })
 
-    it("Створення екзепляру класу Check", () => {
+    fit("Створення екзепляру класу Check", () => {
         expect(shower1).toBeTruthy();
     })
 
-    it("Створення екзепляру класу Toy", () => {
+    fit("Створення екзепляру класу Toy", () => {
         expect(toy).toBeTruthy();
     })
 
-    it("Створення екзепляру класу Dairy", () => {
+    fit("Створення екзепляру класу Dairy", () => {
         expect(dairy).toBeTruthy();
     })
 

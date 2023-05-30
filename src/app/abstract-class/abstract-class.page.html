@@ -33,5 +33,9 @@
         <ion-button (click)="ras(Inputn.value)">Розрахунок</ion-button>
         <p *ngFor="let b of bird" [ngStyle]="{color:getColor(b.food, max)}">{{b.show()}}</p>
       </ion-card-content>
+      <ion-card-content>
+        <p>Сумарна кількість їжі для птахів:</p>
+        <p>{{sum}}</p>
+      </ion-card-content>
     </ion-card>
 </ion-content>

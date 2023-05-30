@@ -12,6 +12,7 @@ export class AbstractClassPage implements OnInit {
 
   bird: Bird[] = [];
   max: number = 0;
+  sum: number = 0;
   constructor() { }
 
   getRandomInt(max: number){
@@ -28,6 +29,7 @@ export class AbstractClassPage implements OnInit {
     this.max = 0;
     this.bird.forEach((element) => {
       element.F();
+      this.sum += + element.food
       if (this.max < element.food) this.max = element.food;
       console.log(element.show())
     });

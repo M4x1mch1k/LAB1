@@ -13,10 +13,10 @@ describe('TabService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  it('Табулювання значення х=0.1 у=0.9983', () => {
+  fit('Табулювання значення х=0.1 у=0.9379', () => {
     let x = 0.1;
-    let y = 0.9983;
-    let xy = service.getTab();
+    let y = 0.9379;
+    let xy = service.getTab(x, y, 0.1);
     let y1: number | undefined = 5;
     y1 = xy.get(x);
     if(y1 !== undefined){

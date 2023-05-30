@@ -29,15 +29,5 @@ export class TabService {
       const result = sum * (pi - x) / 2;
     }
     return this.xy;
-
-    /*while (x <= xk){
-      y = (Math.PI - x)/2;
-      this.xy.set(x,y);
-      if (this.logService){
-        this.logService.write("x= "+x.toFixed(2)+"y= "+y.toFixed(2));
-      }
-      x=x+h;
-    }
-    return this.xy;*/
   }
 }
