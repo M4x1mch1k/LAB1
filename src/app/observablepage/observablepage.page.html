@@ -7,10 +7,10 @@
     <ion-label>Current Subject</ion-label>
     <ion-label>{{subject.name}}</ion-label>
   </ion-item>
-  <ion-item
-    *ngFor="let professor of professorList.searchProfessorResult ; let j = index">
-    {{professor}}
-  </ion-item>
+  <ion-card *ngFor="let professor of professorList.searchProfessor ; let j = index">
+    <ion-item>{{professor.name}}</ion-item>
+    <ion-item>{{professor.departament}}</ion-item>
+  </ion-card>
   <ion-item>
     <ion-label>Enter new Subject</ion-label>
     <ion-input #InputSubject></ion-input>

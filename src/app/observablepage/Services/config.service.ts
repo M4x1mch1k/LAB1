@@ -17,4 +17,4 @@ export class ConfigService {
   constructor() { }
 }
 var subjectList = new SubjectList();
-const DEFAULT_SUBJECT = subjectList.SubjectMap.get(0)
+const DEFAULT_SUBJECT = subjectList.subject[0]
